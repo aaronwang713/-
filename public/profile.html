@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人介紹 - 老王的美食天地</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(45deg, #85a395, #ffffff);
+            padding: 15px;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .dropdown {
+            position: relative;
+            margin: 0 15px;
+        }
+        .dropdown button {
+            background: transparent;
+            color: white;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            min-width: 160px;
+            overflow: hidden;
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            color: black;
+        }
+        .dropdown-content a:hover {
+            background: #85a395;
+            color: white;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .container {
+            margin-top: 80px;
+            padding: 20px;
+        }
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        .profile-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .slideshow {
+            position: relative;
+            max-width: 400px;
+            overflow: hidden;
+        }
+        .slides img {
+            width: 100%;
+            display: none;
+            border-radius: 15px;
+        }
+        .profile-text {
+            margin-top: 20px;
+            font-size: 18px;
+            max-width: 600px;
+            text-align: center;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #85a395;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .image-container img {
+            max-width: 30%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="dropdown">
+            <button>關於我們</button>
+            <div class="dropdown-content">
+                <a href="/profile.html">個人介紹</a>
+                <a href="/location.html">個人據點</a>
+                <a href="/pizza">Secret Button</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="title">個人介紹</h1>
+        <div class="profile-section">
+            <div class="slideshow">
+                <img src="image1.jpg" class="slide" style="display: block;">
+                <img src="image2.jpg" class="slide">
+                <img src="image3.jpg" class="slide">
+            </div>
+            <p class="profile-text">這是老王，美食愛好者，喜愛探索各地美食，也是一個超級大帥哥！</p>
+            <button class="btn" onclick="window.history.back()">返回</button>
+        </div>
+    </div>
+    <script>
+        let index = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            index++;
+            if (index > slides.length) { index = 1; }
+            slides[index - 1].style.display = "block";
+            setTimeout(showSlides, 3000);
+        }
+        showSlides();
+    </script>
+</body>
+</html>

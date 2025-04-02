@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>北部晚餐 - 老王的美食天地</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            text-align: center;
+            
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(45deg, #85a395, #ffffff);
+            padding: 15px;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        .dropdown button {
+            background: transparent;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            min-width: 160px;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .dropdown-content a:hover {
+            background: #85a395;
+            color: white;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .container {
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 30%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .description {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            text-align: center;
+            max-width: 900px;
+            margin: 20px auto;
+            font-weight: bold;
+        }
+
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #85a395;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .back-button:hover {
+            background-color: #85a395;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="dropdown">
+            <button>關於我們</button>
+            <div class="dropdown-content">
+                <a href="/profile.html">個人介紹</a>
+                <a href="/location.html">個人據點</a>
+                <a href="/pizza">Secret Button</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button>北部美食</button>
+            <div class="dropdown-content">
+                <a href="/north-breakfast">早餐</a>
+                <a href="/north-lunch">中餐</a>
+                <a href="/north-dinner">晚餐</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button>中部美食</button>
+            <div class="dropdown-content">
+                <a href="/central-breakfast">早餐</a>
+                <a href="/central-lunch">中餐</a>
+                <a href="/central-dinner">晚餐</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button>南部美食</button>
+            <div class="dropdown-content">
+                <a href="/south-breakfast">早餐</a>
+                <a href="/south-lunch">中餐</a>
+                <a href="/south-dinner">晚餐</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button>東部美食</button>
+            <div class="dropdown-content">
+                <a href="/east-breakfast">早餐</a>
+                <a href="/east-lunch">中餐</a>
+                <a href="/east-dinner">晚餐</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="title">北部晚餐</h1>
+
+        <!-- 圖片區域 -->
+        <div class="image-container">
+            <img src="north-dinner.jpg" alt="北部中餐">
+        </div>
+
+        <!-- 文字描述區域 -->
+        <div class="description">
+            <h2>台北晚餐｜台電勵進餐廳</h2>
+            <p>店家創立於創立於1966年，是飄香近60年的老字號，菜單主打酸菜白肉火鍋吃到飽。</p>
+            <p>地址:台北市大安區和平東路1段75巷 </p>
+        </div>
+
+        <!-- 返回按鈕 -->
+        <a href="/" class="back-button">返回首頁</a>
+    </div>
+</body>
+</html>
